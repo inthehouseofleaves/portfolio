@@ -23,7 +23,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 90%;
-    border: 0.2rem solid var(--accentColor);
+    // border: 0.2rem solid var(--accentColor);
   }
   .intro {
     width: 60%;
@@ -37,6 +37,7 @@ header {
     width: 85%;
     background-image: url(https://api.time.com/wp-content/uploads/2017/03/personal-shopper-film.jpg?w=800&quality=85);
     background-position: center;
+    border: 0.2rem solid var(--accentColor);
   }
   .logo {
     display: flex;
@@ -51,20 +52,6 @@ header {
     }
   p {
     text-align: center;
-  }
-  .socials {
-    margin: 20px;
-  }
-  .fab {
-    margin: 5px;
-    border: 0.2rem solid var(--accentColor);
-    padding: 10px;
-    border-radius: 50%;
-    &:hover,
-    &:focus {
-      // color: var(--accentColor);
-      background-color: var(--opacity);
-    }
   }
   .buttonContainer {
     display: flex;

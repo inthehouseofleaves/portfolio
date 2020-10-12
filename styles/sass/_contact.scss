@@ -1,0 +1,36 @@
+// CONTACT PAGE
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  .contactInfo{
+    display: flex;
+  }
+  .square {
+    width: 25%;
+    height: calc(15vh - 1rem);
+    margin: 3rem 0;
+  }
+  .location,
+  .phone,
+  .email {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 80%;
+    width: 25%;
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}
