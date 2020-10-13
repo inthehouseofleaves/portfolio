@@ -262,8 +262,78 @@ body {
 
 .wrapper {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  background: var(--opacity);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+nav .logo {
+  position: relative;
+  left: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+nav .logo p {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  border: 0.2rem solid var(--accentColor);
+  border-radius: 50%;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+  position: relative;
+  right: 7rem;
+}
+
+nav li {
+  list-style-type: none;
+  width: calc(100%/ 8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: var(--accentColor);
+}
+
+nav a:hover, nav a:focus {
+  color: var(--textColor);
 }
 
 h1, h2, h3, h4, h5 {
@@ -321,18 +391,29 @@ p {
   margin: 20px;
 }
 
-.fab,
-.fas {
+.fab {
   margin: 5px;
   border: 0.2rem solid var(--accentColor);
   padding: 10px;
   border-radius: 50%;
 }
 
-.fab:hover, .fab:focus,
-.fas:hover,
-.fas:focus {
+.fab:hover, .fab:focus {
   background-color: var(--opacity);
+}
+
+MARGIN-TOP EVERY PAGE
+header,
+.services,
+.experiencePage {
+  margin-top: 5vh;
+}
+
+.servicesPage,
+.skillsAndAwards,
+.projectsPage,
+.contactPage {
+  margin-top: 20vh;
 }
 
 .squaresDiv {
@@ -398,10 +479,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -409,6 +490,12 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+}
+
+header .introPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 header .profilePic,
@@ -426,7 +513,6 @@ header .intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 4rem 0;
 }
 
 header .intro {
@@ -542,12 +628,12 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 90%;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 10rem;
 }
 
 .about .aboutMe {
@@ -677,6 +763,7 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 10rem;
 }
 
 .servicesPage .anotherSquaresDiv {
@@ -688,6 +775,8 @@ header .intro button:hover, header .intro button:focus {
   border: 0.3rem solid var(--textColor);
   padding: 1rem;
   margin: 4rem 0;
+  -webkit-box-shadow: 1rem 1rem var(--accentColor);
+          box-shadow: 1rem 1rem var(--accentColor);
 }
 
 .servicesPage .square {
@@ -726,27 +815,60 @@ header .intro button:hover, header .intro button:focus {
 
 .servicesPage .serviceContent {
   position: relative;
-  bottom: 40px;
+  bottom: 4rem;
 }
 
 .servicesPage .skillsAndAwards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid black;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 5rem;
+  height: 100vh;
+}
+
+.servicesPage .skillsAndAwards .skills {
+  border-radius: 2rem;
+  width: 100%;
+  padding: 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+}
+
+.servicesPage .skillsAndAwards .square {
+  border: 2px solid var(--textColor);
+  width: 160px;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 1rem 1rem var(--accentColor);
+          box-shadow: 1rem 1rem var(--accentColor);
 }
 
-.servicesPage .skills,
-.servicesPage .awards {
-  margin: 5rem 0;
-  border: 1px solid red;
-  width: 48%;
+.servicesPage .skillsAndAwards .square:hover, .servicesPage .skillsAndAwards .square:focus {
+  background-color: var(--opacity);
+}
+
+.servicesPage .skillsAndAwards .fas {
+  top: 0;
 }
 
 @media (max-width: 1270px) {
@@ -794,7 +916,6 @@ header .intro button:hover, header .intro button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid blue;
   padding: 1rem;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
