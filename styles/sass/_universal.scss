@@ -31,6 +31,7 @@ body {
   margin: 0 auto;
 }
 
+// NAV
 nav {
   display: flex;
   width: 100%;
@@ -62,7 +63,7 @@ nav {
   }
   li {
     list-style-type: none;
-    width: calc(100%/ 8);
+    width: calc(100%/7.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +79,7 @@ nav {
   }
 }
 
+// HEADERS
 h1, h2, h3, h4, h5 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -85,50 +87,42 @@ h1, h2, h3, h4, h5 {
   line-height: 1.7;
   margin: 0;
 }
-
-h1, h2 {
-  font-size: 5rem;
-  text-align: center;
-}
-
 h1 {
+  text-align: center;
   color: var(--accentColor);
 }
-
 h2 {
+  font-size: 4rem;
   border: 5px solid var(--accentColor);
+  text-align: center;
 }
-
 h3 {
   font-size: 3rem;
 }
-
 h4 {
   font-size: 2rem;
 }
-
 h5 {
   font-size: 3rem;
   color: var(--accentColor);
 }
-
 h6 {
   font-size: 2rem;
 }
 
+// TEXT STYLES
 a {
   color: var(--textColor);
   text-decoration: none;
 }
-
 a:hover, a:focus {
   color: var(--accentColor);
 }
-
 p {
   margin: 0.5rem 0;
 }
 
+// SOCIAL MEDIA
 .socials {
     margin: 20px;
   }
@@ -143,19 +137,30 @@ p {
   }
 }
 
-MARGIN-TOP EVERY PAGE
-
-header,
-.services,
-.experiencePage {
-  margin-top: 5vh;
+// MARGIN-TOP
+.introPage,
+.services {
+  margin-top: 5rem;
+}
+.education,
+.work {
+  margin-top: 10rem;
+}
+.projectsPage {
+  margin-top: 15rem;
 }
 
-.servicesPage,
-.skillsAndAwards,
-.projectsPage,
+// MARGIN-BOTTOM
+header,
+.experiencePage,
 .contactPage {
-  margin-top: 20vh;
+  margin-bottom: 5rem;
+}
+
+// DOUBLE PAGES
+.contactInfo,
+.skillsAndAwards {
+  margin-top: 15vh;
 }
 
 // SQUARES

@@ -314,7 +314,7 @@ nav ul {
 
 nav li {
   list-style-type: none;
-  width: calc(100%/ 8);
+  width: calc(100%/7.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,17 +344,15 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-h1, h2 {
-  font-size: 5rem;
-  text-align: center;
-}
-
 h1 {
+  text-align: center;
   color: var(--accentColor);
 }
 
 h2 {
+  font-size: 4rem;
   border: 5px solid var(--accentColor);
+  text-align: center;
 }
 
 h3 {
@@ -402,18 +400,29 @@ p {
   background-color: var(--opacity);
 }
 
-MARGIN-TOP EVERY PAGE
-header,
-.services,
-.experiencePage {
-  margin-top: 5vh;
+.introPage,
+.services {
+  margin-top: 5rem;
 }
 
-.servicesPage,
-.skillsAndAwards,
-.projectsPage,
+.education,
+.work {
+  margin-top: 10rem;
+}
+
+.projectsPage {
+  margin-top: 15rem;
+}
+
+header,
+.experiencePage,
 .contactPage {
-  margin-top: 20vh;
+  margin-bottom: 5rem;
+}
+
+.contactInfo,
+.skillsAndAwards {
+  margin-top: 15vh;
 }
 
 .squaresDiv {
@@ -971,6 +980,7 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 5rem;
 }
 
 .contactPage .contactInfo {
