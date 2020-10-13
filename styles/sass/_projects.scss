@@ -1,0 +1,64 @@
+// PROJECTS
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.projectsPage{
+  .works {
+    margin: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .anotherSquaresDiv {
+    flex-wrap: wrap;
+    display: flex; 
+    // width: calc(100%/3);
+    border: 1px solid blue;
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+  .work {
+    width: 350px;
+    height: 210px;
+    background-color: var(--secondaryColor);
+    &:hover,
+    &:focus {
+      background: rgba(7,7,8, 0.2);
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .projectsPage{
+    .work {
+      width: 290px;
+      height: 174px;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .projectsPage{
+    .work {
+      width: 330px;
+      height: 198px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .projectsPage{
+    .work {
+      height: 306px;
+      width: 510px;
+    }
+  }
+}

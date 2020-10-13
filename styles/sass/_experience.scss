@@ -20,14 +20,15 @@
   }
   .experience {
     display: flex;
-    justify-content: space-evenly;;
+    justify-content: space-between;
+    margin: 3rem 0;
   }
   .work,
   .education {
     padding: 0 1.5rem;
     background-color: var(--secondaryColor);
     border-radius: 5rem;
-    width: 47%;
+    width: 48%;
   }
   .job,
   .school {

@@ -1,0 +1,82 @@
+// SERVICES
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.servicesPage {
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .anotherSquaresDiv {
+    flex-wrap: wrap;
+    display: flex; 
+    border: 0.3rem solid var(--textColor);
+    padding: 1rem;
+    // justify-content: space-evenly;
+    margin: 4rem 0;
+  }
+  .square {
+    justify-content: flex-start;
+  }
+  .service {
+    width: 350px;
+    height: 293px;
+    &:hover,
+    &:focus {
+      background: rgba(7,7,8, 0.2);
+    }
+  }
+  .fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--accentColor);
+    border: 1rem solid var(--mainColor);
+    border-radius: 50%;
+  }
+  .serviceContent {
+    position: relative;
+    bottom: 40px;
+  }
+  .skillsAndAwards {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skills,
+  .awards {
+    margin: 5rem 0;
+    border: 1px solid red;
+    width: 48%;
+  }
+}
+
+  @media (max-width: 1270px){
+    .servicesPage .services {
+      justify-content: space-evenly;
+    }
+  }
+
+  @media (max-width: 1200px){
+    .service {
+      width: 50vw;
+    &:hover,
+    &:focus {
+      background: rgba(7,7,8, 0.2);
+    }
+  }
+}

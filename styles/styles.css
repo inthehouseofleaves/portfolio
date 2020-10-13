@@ -321,14 +321,17 @@ p {
   margin: 20px;
 }
 
-.fab {
+.fab,
+.fas {
   margin: 5px;
   border: 0.2rem solid var(--accentColor);
   padding: 10px;
   border-radius: 50%;
 }
 
-.fab:hover, .fab:focus {
+.fab:hover, .fab:focus,
+.fas:hover,
+.fas:focus {
   background-color: var(--opacity);
 }
 
@@ -423,7 +426,7 @@ header .intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 90%;
+  margin: 4rem 0;
 }
 
 header .intro {
@@ -436,7 +439,7 @@ header .profilePic {
 }
 
 header .picOfYou {
-  height: 85%;
+  height: 40rem;
   width: 85%;
   background-image: url(https://api.time.com/wp-content/uploads/2017/03/personal-shopper-film.jpg?w=800&quality=85);
   background-position: center;
@@ -497,12 +500,7 @@ header .intro button:hover, header .intro button:focus {
   --opacity: rgba(255,255,255, 0.2);
 }
 
-.aboutPage {
-  height: 100vh;
-}
-
 .about {
-  height: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,6 +511,7 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
 }
 
 .about .name,
@@ -552,7 +551,11 @@ header .intro button:hover, header .intro button:focus {
 }
 
 .about .aboutMe {
-  width: 55%;
+  width: 52%;
+}
+
+.about .contactMe {
+  margin: 1.5rem 0;
 }
 
 .about .buttonContainer {
@@ -577,7 +580,7 @@ header .intro button:hover, header .intro button:focus {
 }
 
 .about .facts {
-  width: 40%;
+  width: 44%;
 }
 
 .about .square {
@@ -615,9 +618,10 @@ header .intro button:hover, header .intro button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3rem 0;
 }
 
 .experiencePage .work,
@@ -625,7 +629,7 @@ header .intro button:hover, header .intro button:focus {
   padding: 0 1.5rem;
   background-color: var(--secondaryColor);
   border-radius: 5rem;
-  width: 47%;
+  width: 48%;
 }
 
 .experiencePage .job,
@@ -652,6 +656,180 @@ header .intro button:hover, header .intro button:focus {
   display: inline-block;
   text-transform: uppercase;
   padding: 0.2rem 0.5rem;
+}
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.servicesPage .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.servicesPage .anotherSquaresDiv {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0.3rem solid var(--textColor);
+  padding: 1rem;
+  margin: 4rem 0;
+}
+
+.servicesPage .square {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.servicesPage .service {
+  width: 350px;
+  height: 293px;
+}
+
+.servicesPage .service:hover, .servicesPage .service:focus {
+  background: rgba(7, 7, 8, 0.2);
+}
+
+.servicesPage .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  bottom: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: var(--accentColor);
+  border: 1rem solid var(--mainColor);
+  border-radius: 50%;
+}
+
+.servicesPage .serviceContent {
+  position: relative;
+  bottom: 40px;
+}
+
+.servicesPage .skillsAndAwards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.servicesPage .skills,
+.servicesPage .awards {
+  margin: 5rem 0;
+  border: 1px solid red;
+  width: 48%;
+}
+
+@media (max-width: 1270px) {
+  .servicesPage .services {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1200px) {
+  .service {
+    width: 50vw;
+  }
+  .service:hover, .service:focus {
+    background: rgba(7, 7, 8, 0.2);
+  }
+}
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.projectsPage .works {
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.projectsPage .anotherSquaresDiv {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid blue;
+  padding: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.projectsPage .work {
+  width: 350px;
+  height: 210px;
+  background-color: var(--secondaryColor);
+}
+
+.projectsPage .work:hover, .projectsPage .work:focus {
+  background: rgba(7, 7, 8, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .projectsPage .work {
+    width: 290px;
+    height: 174px;
+  }
+}
+
+@media (max-width: 992px) {
+  .projectsPage .work {
+    width: 330px;
+    height: 198px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsPage .work {
+    height: 306px;
+    width: 510px;
+  }
 }
 
 :root {
@@ -705,6 +883,38 @@ header .intro button:hover, header .intro button:focus {
 .contactPage .phone i,
 .contactPage .email i {
   margin-right: 0.5rem;
+}
+
+.contactPage form {
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--secondaryColor);
+  border-radius: 1.5rem;
+}
+
+.contactPage input {
+  width: 90%;
+  margin: 1rem 0;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: lightgray;
+  border: none;
+}
+
+.contactPage .submit {
+  background-color: var(--accentColor);
+  color: var(--textColor);
+  padding: 1rem;
 }
 
 :root {
