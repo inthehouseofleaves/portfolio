@@ -16,11 +16,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 10rem;
   }
   .anotherSquaresDiv {
     flex-wrap: wrap;
     display: flex; 
-    // width: calc(100%/3);
     padding: 1rem;
     justify-content: space-evenly;
   }
@@ -28,10 +28,52 @@
     width: 350px;
     height: 210px;
     background-color: var(--secondaryColor);
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    background-size: cover;
+    background-position: center;
+    border: 0.2rem solid var(--accentColor);
+    box-shadow: var(--accentColor) 1rem 1rem;
     &:hover,
     &:focus {
-      background: rgba(7,7,8, 0.2);
+      position: relative;
+      top: -1.5rem;
     }
+  }
+  #karaokeProject {
+    background-image: url(https://i.pinimg.com/originals/e7/a1/0d/e7a10df3d827634fc588fb8cd06a3dbd.jpg);
+  }
+  #giphyProject {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67401945-34fc-46b8-8e8f-1982847277d4/ddba22b-2fad9d00-1d3f-4ec8-a65d-199a09dfa4e1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNjc0MDE5NDUtMzRmYy00NmI4LThlOGYtMTk4Mjg0NzI3N2Q0XC9kZGJhMjJiLTJmYWQ5ZDAwLTFkM2YtNGVjOC1hNjVkLTE5OWEwOWRmYTRlMS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ._-whxwEBEaTLWUvSWL80KTGiwpoy9dSPzXSRhfTAzeM);
+  }
+  #pokemonProject {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19dc5761-74ce-493a-a3d9-f42c2d213066/dd9ygyq-56155754-6036-4ee2-a9f7-1b49bfaa0268.png/v1/fill/w_1192,h_670,q_70,strp/pikachu_minimalist_vector_by_erohir_dd9ygyq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MDg1IiwicGF0aCI6IlwvZlwvMTlkYzU3NjEtNzRjZS00OTNhLWEzZDktZjQyYzJkMjEzMDY2XC9kZDl5Z3lxLTU2MTU1NzU0LTYwMzYtNGVlMi1hOWY3LTFiNDliZmFhMDI2OC5wbmciLCJ3aWR0aCI6Ijw9OTA0MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.EiAse7hl9nbH2ay_lzsiJA7pEicVrJQtQOQ0lzaxo0M);
+  }
+  #plantProject {
+    background-image: url(https://i.pinimg.com/564x/00/77/c2/0077c2282b04ca5702e9c549b299641c.jpg);
+  }
+  #philippines {
+    background-image: url(http://gdj.graphicdesignjunction.com/wp-content/uploads/2013/03/minimal+wallpapers+75.jpg);
+  }
+  // #france {
+  //   background-image: url(../../assets/france.jpg)
+  // }
+  #germany {
+    background-image: url(https://ih1.redbubble.net/image.1252255825.1633/st,small,507x507-pad,600x600,f8f8f8.jpg);
+  }
+  #personal {
+    background-image: url(../../assets/girl.jpg);
+    background-position: center top;
+  }
+  #italy {
+    background-image: url(../../assets/italy.jpg)
+  }
+  #pride {
+    background-image: url(../../assets/pride.png)
+  }
+  #santa {
+    background-image: url(https://cdn.dribbble.com/users/1093412/screenshots/5757505/santa_claus_levitating.png);
   }
 }
 

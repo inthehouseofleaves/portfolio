@@ -1,0 +1,61 @@
+// RESUME
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.cvPage {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 15rem;
+  height: calc(100vh - 20rem);
+  .coverLetter,
+  .resume {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cvContainer {
+    width: 100%;
+    height: calc(100% - 5rem);
+    display: flex;
+  }
+  .imgContainer {
+    height: 100%;
+    width: 50%;
+    border-radius: 2rem;
+    border: 0.2rem solid var(--accentColor);
+    box-shadow: 1rem 1rem var(--accentColor);
+    top: 0;
+    transition: top ease 0.5s;
+    &:hover,
+    &:focus {
+      position: relative;
+      top: -1.5rem;
+    }
+  }
+  .resume .imgContainer {
+    background-image: url(../../assets/resumeScreenshot.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .coverLetter .imgContainer {
+    background-image: url(../../assets/girl.jpg);
+    background-position: center
+  }
+  .buttonContainer {
+    margin-top: 3rem;
+  }
+  button {
+    width: auto;
+  }
+
+}

@@ -12,50 +12,70 @@
 
 .contactPage {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 5rem;
+  flex-direction: row-reverse;
+  height: 90vh;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(100vh - 5rem);
+
+  // LEFT SIDE: CONTACT INFO SECTION
   .contactInfo{
     display: flex;
+    background-color: var(--secondaryColor);
+    margin-top: 20vh;
+    border: solid 2px var(--textColor);
+    width: 80%;
+    height: 60vh;
+    box-shadow: 2rem 2rem var(--accentColor);
+    padding: 2.5rem;
+    top: 0;
+    transition: top ease 0.5s;
+    &:hover,
+    &:focus {
+      position: relative;
+      top: -1.5rem;
+    }
+  }
+  .contact {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+  }
+  .contactContainer {
+    width: 100%;
+    height: 85%;
   }
   .square {
-    width: 25%;
     height: calc(15vh - 1rem);
-    margin: 3rem 0;
   }
-  .location,
+  .calendly,
   .phone,
   .email {
     display: flex;
     flex-direction: column;
-    text-align: center;
     font-size: 80%;
-    width: 25%;
+    padding: 1rem 1.5rem;
     i {
       margin-right: 0.5rem;
     }
   }
-  form {
-    // height: 50vh;
-    padding: 3rem 0;
+  .socials {
+    margin: 0;
+  }
+
+  // RIGHT SIDE: PROFILE PIC SECTION
+  .profilePic {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    justify-content: center;
     align-items: center;
-    background-color: var(--secondaryColor);
-    border-radius: 1.5rem;
+    width: 40%;
   }
-  input {
-    width: 90%;
-    margin: 1rem 0;
-    border-radius: 1.5rem;
-    padding: 0.5rem;
-    background-color: lightgray;
-    border: none;
-  }
-  .submit {
-    background-color: var(--accentColor);
-    color: var(--textColor);
-    padding: 1rem;
-    // width: 30%;
+  .picOfYou {
+    height: 100%;
+    width: 100%;
+    border: 0.5rem solid var(--textColor);
+    background-image: url(../../assets/london1.JPG);
+    background-size: cover;
+    background-position: center;
   }
 }

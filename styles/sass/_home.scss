@@ -1,0 +1,141 @@
+// HOME 2
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.homePage {
+  margin-top: 10rem;
+  height: calc(100vh - 15rem);
+  display: flex;
+
+  .home {
+    height: 100%;
+    display: flex;
+  }
+  .info,
+  .profilePic {
+    display: flex;
+    flex-direction: column;
+  }
+  .info {
+    width: 60%;
+    align-items: left;
+    text-align: left;
+  }
+  .profilePic {
+    margin-top: 1.5rem;
+    align-items: center;
+    width: 40%;
+  }
+  .picOfYou {
+    width: 85%;
+    height: 85%;
+    background-image: url(../../assets/profilePic.JPG);
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    border: 0.2rem solid white;
+    box-shadow: 1rem 1rem var(--accentColor);
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    &:hover,
+    &:focus {
+      position: relative;
+      top: -1.5rem;
+    }
+  }
+}
+
+@media (max-width: 901px){
+  .homePage {
+    .profilePic {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+    }
+    .home {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      height: auto;
+      display: flex;
+      align-items: center;
+    }
+    .info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    p {
+      text-align: center;
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+    }
+    button {
+      width: auto;
+    }
+  }
+}
+
+// TABLET
+@media (max-width: 780px){
+  
+  .homePage {
+    .info {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .homePage {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .homePage {
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.7rem;
+    }
+    .buttonContainer {
+      width: 100%;
+      display: flex;
+    }
+    a {
+      width: 100%;
+    }
+    button {
+      font-size: 1.7rem;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .homePage {
+    h1 {
+      font-size: 2.8rem
+    }
+    p, button {
+      font-size: 1.5rem;
+    }
+  }
+}
+

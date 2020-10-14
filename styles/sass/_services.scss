@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10rem;
+    margin-bottom: 10rem;
   }
   .anotherSquaresDiv {
     flex-wrap: wrap;
@@ -28,6 +29,19 @@
   .square {
     justify-content: flex-start;
   }
+  .anotherSquaresDiv,
+  .square {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+  .anotherSquaresDiv:hover,
+  .anotherSquaresDiv:focus,
+  .square:hover,
+  .square:focus {
+    position: relative;
+    top: -1.5rem;
+  }
   .service {
     width: 350px;
     height: 293px;
@@ -36,17 +50,20 @@
       background: rgba(7,7,8, 0.2);
     }
   }
-  .fas {
+  .fas,
+  .fab {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    bottom: 50px;
     width: 80px;
     height: 80px;
     background-color: var(--accentColor);
     border: 1rem solid var(--mainColor);
     border-radius: 50%;
+  }
+  .fas {
+    position: relative;
+    bottom: 50px;
   }
   .serviceContent {
     position: relative;

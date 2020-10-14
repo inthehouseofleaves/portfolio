@@ -271,7 +271,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 15vh;
+  height: 8rem;
   background: var(--opacity);
   position: fixed;
   z-index: 1;
@@ -308,8 +308,6 @@ nav ul {
       -ms-flex-pack: right;
           justify-content: right;
   width: 100%;
-  position: relative;
-  right: 7rem;
 }
 
 nav li {
@@ -321,10 +319,11 @@ nav li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
+  position: relative;
 }
 
 nav a {
@@ -336,6 +335,38 @@ nav a:hover, nav a:focus {
   color: var(--textColor);
 }
 
+@media (max-width: 900px) {
+  nav a {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 780px) {
+  nav .logo {
+    display: none;
+  }
+  nav ul {
+    padding-left: 0 2rem;
+  }
+  nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100%/6);
+  }
+  nav a {
+    font-size: 1.7rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  nav a {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
+
 h1, h2, h3, h4, h5 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -345,7 +376,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  text-align: center;
+  font-size: 5rem;
   color: var(--accentColor);
 }
 
@@ -357,6 +388,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  color: var(--accentColor);
 }
 
 h4 {
@@ -370,6 +402,7 @@ h5 {
 
 h6 {
   font-size: 2rem;
+  color: var(--accentColor);
 }
 
 a {
@@ -386,7 +419,7 @@ p {
 }
 
 .socials {
-  margin: 20px;
+  margin: 2rem 2rem 2rem 0;
 }
 
 .fab {
@@ -400,29 +433,17 @@ p {
   background-color: var(--opacity);
 }
 
-.introPage,
-.services {
-  margin-top: 5rem;
+button {
+  background-color: transparent;
+  border-radius: 1.5rem;
+  color: var(--textColor);
+  border: 2px solid var(--accentColor);
+  padding: 10px;
+  width: 40%;
 }
 
-.education,
-.work {
-  margin-top: 10rem;
-}
-
-.projectsPage {
-  margin-top: 15rem;
-}
-
-header,
-.experiencePage,
-.contactPage {
-  margin-bottom: 5rem;
-}
-
-.contactInfo,
-.skillsAndAwards {
-  margin-top: 15vh;
+button:hover, button:focus {
+  background-color: var(--opacity);
 }
 
 .squaresDiv {
@@ -484,7 +505,23 @@ header,
   --opacity: rgba(255,255,255, 0.2);
 }
 
-header {
+.homePage {
+  margin-top: 10rem;
+  height: calc(100vh - 15rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homePage .home {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homePage .info,
+.homePage .profilePic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,97 +529,139 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
 }
 
-header .introPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .profilePic,
-header .intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header .intro {
+.homePage .info {
   width: 60%;
-  padding: 0 10px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: left;
 }
 
-header .profilePic {
+.homePage .profilePic {
+  margin-top: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40%;
 }
 
-header .picOfYou {
-  height: 40rem;
+.homePage .picOfYou {
   width: 85%;
-  background-image: url(https://api.time.com/wp-content/uploads/2017/03/personal-shopper-film.jpg?w=800&quality=85);
+  height: 85%;
+  background-image: url(../../assets/profilePic.JPG);
+  background-size: cover;
   background-position: center;
-  border: 0.2rem solid var(--accentColor);
+  border-radius: 2rem;
+  border: 0.2rem solid white;
+  -webkit-box-shadow: 1rem 1rem var(--accentColor);
+          box-shadow: 1rem 1rem var(--accentColor);
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
 }
 
-header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+.homePage .picOfYou:hover, .homePage .picOfYou:focus {
+  position: relative;
+  top: -1.5rem;
 }
 
-header .logo p {
-  display: inline-block;
-  padding: 1.2rem 2rem;
-  border: 0.2rem solid var(--accentColor);
-  border-radius: 50%;
+@media (max-width: 901px) {
+  .homePage .profilePic {
+    display: none;
+  }
+  .homePage h1 {
+    text-align: center;
+  }
+  .homePage .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .homePage .info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .homePage p {
+    text-align: center;
+  }
+  .homePage .buttonContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .homePage button {
+    width: auto;
+  }
 }
 
-header p {
-  text-align: center;
+@media (max-width: 780px) {
+  .homePage .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-header .buttonContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 600px) {
+  .homePage h1 {
+    font-size: 3.5rem;
+  }
 }
 
-header .intro button {
-  background-color: transparent;
-  border-radius: 1.5rem;
-  color: var(--textColor);
-  border: 2px solid var(--accentColor);
-  padding: 10px;
-  width: 40%;
+@media (max-width: 500px) {
+  .homePage h1 {
+    font-size: 3.5rem;
+  }
+  .homePage p {
+    font-size: 1.7rem;
+  }
+  .homePage .buttonContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .homePage a {
+    width: 100%;
+  }
+  .homePage button {
+    font-size: 1.7rem;
+    width: 100%;
+  }
 }
 
-header .intro button:hover, header .intro button:focus {
-  background-color: var(--opacity);
+@media (max-width: 500px) {
+  .homePage h1 {
+    font-size: 2.8rem;
+  }
+  .homePage p, .homePage button {
+    font-size: 1.5rem;
+  }
 }
 
 :root {
@@ -606,10 +685,10 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  height: calc(100vh - 5rem);
 }
 
-.about .name,
+.about .calendly,
 .about .phone,
 .about .email,
 .about .freelance {
@@ -621,7 +700,7 @@ header .intro button:hover, header .intro button:focus {
           align-items: center;
 }
 
-.about .name h6,
+.about .calendly h6,
 .about .phone h6,
 .about .email h6,
 .about .freelance h6 {
@@ -661,19 +740,6 @@ header .intro button:hover, header .intro button:focus {
   margin: 2.5rem 0;
 }
 
-.about .aboutMe button {
-  background-color: transparent;
-  border-radius: 1.5rem;
-  color: var(--textColor);
-  border: 2px solid var(--accentColor);
-  padding: 10px;
-  width: 40%;
-}
-
-.about .aboutMe button:hover, .about .aboutMe button:focus {
-  background-color: var(--opacity);
-}
-
 .about .facts {
   width: 44%;
 }
@@ -681,6 +747,17 @@ header .intro button:hover, header .intro button:focus {
 .about .square {
   width: 48%;
   height: calc(25vh - 2rem);
+  border: 0.2rem solid var(--accentColor);
+  -webkit-box-shadow: var(--accentColor) 0.3rem 0.3rem;
+          box-shadow: var(--accentColor) 0.3rem 0.3rem;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+}
+
+.about .square:hover, .about .square:focus {
+  position: relative;
+  top: -1.5rem;
 }
 
 :root {
@@ -773,6 +850,7 @@ header .intro button:hover, header .intro button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .servicesPage .anotherSquaresDiv {
@@ -794,6 +872,22 @@ header .intro button:hover, header .intro button:focus {
           justify-content: flex-start;
 }
 
+.servicesPage .anotherSquaresDiv,
+.servicesPage .square {
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+}
+
+.servicesPage .anotherSquaresDiv:hover,
+.servicesPage .anotherSquaresDiv:focus,
+.servicesPage .square:hover,
+.servicesPage .square:focus {
+  position: relative;
+  top: -1.5rem;
+}
+
 .servicesPage .service {
   width: 350px;
   height: 293px;
@@ -803,7 +897,8 @@ header .intro button:hover, header .intro button:focus {
   background: rgba(7, 7, 8, 0.2);
 }
 
-.servicesPage .fas {
+.servicesPage .fas,
+.servicesPage .fab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,13 +908,16 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  bottom: 50px;
   width: 80px;
   height: 80px;
   background-color: var(--accentColor);
   border: 1rem solid var(--mainColor);
   border-radius: 50%;
+}
+
+.servicesPage .fas {
+  position: relative;
+  bottom: 50px;
 }
 
 .servicesPage .serviceContent {
@@ -917,6 +1015,7 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 10rem;
 }
 
 .projectsPage .anotherSquaresDiv {
@@ -935,10 +1034,61 @@ header .intro button:hover, header .intro button:focus {
   width: 350px;
   height: 210px;
   background-color: var(--secondaryColor);
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+  background-size: cover;
+  background-position: center;
+  border: 0.2rem solid var(--accentColor);
+  -webkit-box-shadow: var(--accentColor) 1rem 1rem;
+          box-shadow: var(--accentColor) 1rem 1rem;
 }
 
 .projectsPage .work:hover, .projectsPage .work:focus {
-  background: rgba(7, 7, 8, 0.2);
+  position: relative;
+  top: -1.5rem;
+}
+
+.projectsPage #karaokeProject {
+  background-image: url(https://i.pinimg.com/originals/e7/a1/0d/e7a10df3d827634fc588fb8cd06a3dbd.jpg);
+}
+
+.projectsPage #giphyProject {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67401945-34fc-46b8-8e8f-1982847277d4/ddba22b-2fad9d00-1d3f-4ec8-a65d-199a09dfa4e1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNjc0MDE5NDUtMzRmYy00NmI4LThlOGYtMTk4Mjg0NzI3N2Q0XC9kZGJhMjJiLTJmYWQ5ZDAwLTFkM2YtNGVjOC1hNjVkLTE5OWEwOWRmYTRlMS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ._-whxwEBEaTLWUvSWL80KTGiwpoy9dSPzXSRhfTAzeM);
+}
+
+.projectsPage #pokemonProject {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19dc5761-74ce-493a-a3d9-f42c2d213066/dd9ygyq-56155754-6036-4ee2-a9f7-1b49bfaa0268.png/v1/fill/w_1192,h_670,q_70,strp/pikachu_minimalist_vector_by_erohir_dd9ygyq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MDg1IiwicGF0aCI6IlwvZlwvMTlkYzU3NjEtNzRjZS00OTNhLWEzZDktZjQyYzJkMjEzMDY2XC9kZDl5Z3lxLTU2MTU1NzU0LTYwMzYtNGVlMi1hOWY3LTFiNDliZmFhMDI2OC5wbmciLCJ3aWR0aCI6Ijw9OTA0MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.EiAse7hl9nbH2ay_lzsiJA7pEicVrJQtQOQ0lzaxo0M);
+}
+
+.projectsPage #plantProject {
+  background-image: url(https://i.pinimg.com/564x/00/77/c2/0077c2282b04ca5702e9c549b299641c.jpg);
+}
+
+.projectsPage #philippines {
+  background-image: url(http://gdj.graphicdesignjunction.com/wp-content/uploads/2013/03/minimal+wallpapers+75.jpg);
+}
+
+.projectsPage #germany {
+  background-image: url(https://ih1.redbubble.net/image.1252255825.1633/st,small,507x507-pad,600x600,f8f8f8.jpg);
+}
+
+.projectsPage #personal {
+  background-image: url(../../assets/girl.jpg);
+  background-position: center top;
+}
+
+.projectsPage #italy {
+  background-image: url(../../assets/italy.jpg);
+}
+
+.projectsPage #pride {
+  background-image: url(../../assets/pride.png);
+}
+
+.projectsPage #santa {
+  background-image: url(https://cdn.dribbble.com/users/1093412/screenshots/5757505/santa_claus_levitating.png);
 }
 
 @media (max-width: 1200px) {
@@ -972,30 +1122,149 @@ header .intro button:hover, header .intro button:focus {
   --opacity: rgba(255,255,255, 0.2);
 }
 
-.contactPage {
+.cvPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 15rem;
+  height: calc(100vh - 20rem);
+}
+
+.cvPage .coverLetter,
+.cvPage .resume {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 5rem;
+}
+
+.cvPage .cvContainer {
+  width: 100%;
+  height: calc(100% - 5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cvPage .imgContainer {
+  height: 100%;
+  width: 50%;
+  border-radius: 2rem;
+  border: 0.2rem solid var(--accentColor);
+  -webkit-box-shadow: 1rem 1rem var(--accentColor);
+          box-shadow: 1rem 1rem var(--accentColor);
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+}
+
+.cvPage .imgContainer:hover, .cvPage .imgContainer:focus {
+  position: relative;
+  top: -1.5rem;
+}
+
+.cvPage .resume .imgContainer {
+  background-image: url(../../assets/resumeScreenshot.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.cvPage .coverLetter .imgContainer {
+  background-image: url(../../assets/girl.jpg);
+  background-position: center;
+}
+
+.cvPage .buttonContainer {
+  margin-top: 3rem;
+}
+
+.cvPage button {
+  width: auto;
+}
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Mulish", sans-serif;
+  --mainColor: #353353;
+  --secondaryColor: #302F4E;
+  --textColor: #ffffff;
+  --accentColor: #DAA520;
+  --opacity: rgba(255,255,255, 0.2);
+}
+
+.contactPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  height: 90vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: calc(100vh - 5rem);
 }
 
 .contactPage .contactInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: var(--secondaryColor);
+  margin-top: 20vh;
+  border: solid 2px var(--textColor);
+  width: 80%;
+  height: 60vh;
+  -webkit-box-shadow: 2rem 2rem var(--accentColor);
+          box-shadow: 2rem 2rem var(--accentColor);
+  padding: 2.5rem;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+}
+
+.contactPage .contactInfo:hover, .contactPage .contactInfo:focus {
+  position: relative;
+  top: -1.5rem;
+}
+
+.contactPage .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactPage .contactContainer {
+  width: 100%;
+  height: 85%;
 }
 
 .contactPage .square {
-  width: 25%;
   height: calc(15vh - 1rem);
-  margin: 3rem 0;
 }
 
-.contactPage .location,
+.contactPage .calendly,
 .contactPage .phone,
 .contactPage .email {
   display: -webkit-box;
@@ -1005,47 +1274,40 @@ header .intro button:hover, header .intro button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
   font-size: 80%;
-  width: 25%;
+  padding: 1rem 1.5rem;
 }
 
-.contactPage .location i,
+.contactPage .calendly i,
 .contactPage .phone i,
 .contactPage .email i {
   margin-right: 0.5rem;
 }
 
-.contactPage form {
-  padding: 3rem 0;
+.contactPage .socials {
+  margin: 0;
+}
+
+.contactPage .profilePic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--secondaryColor);
-  border-radius: 1.5rem;
+  width: 40%;
 }
 
-.contactPage input {
-  width: 90%;
-  margin: 1rem 0;
-  border-radius: 1.5rem;
-  padding: 0.5rem;
-  background-color: lightgray;
-  border: none;
-}
-
-.contactPage .submit {
-  background-color: var(--accentColor);
-  color: var(--textColor);
-  padding: 1rem;
+.contactPage .picOfYou {
+  height: 100%;
+  width: 100%;
+  border: 0.5rem solid var(--textColor);
+  background-image: url(../../assets/london1.JPG);
+  background-size: cover;
+  background-position: center;
 }
 
 :root {
@@ -1061,5 +1323,25 @@ header .intro button:hover, header .intro button:focus {
 footer {
   background-color: var(--accentColor);
   padding: 5px;
-  text-align: center;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--mainColor);
+}
+
+@media (max-width: 500px) {
+  footer {
+    font-size: 1.5rem;
+  }
 }
