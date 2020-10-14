@@ -617,6 +617,9 @@ button:hover, button:focus {
 }
 
 @media (max-width: 780px) {
+  .homePage {
+    height: calc(auto - 5rem);
+  }
   .homePage .info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -625,9 +628,15 @@ button:hover, button:focus {
         -ms-flex-align: center;
             align-items: center;
   }
+  .homePage h1 {
+    font-size: 6rem;
+  }
+  .homePage p, .homePage a, .homePage h6 {
+    font-size: 2rem;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .homePage h1 {
     font-size: 3.5rem;
   }
@@ -740,6 +749,10 @@ button:hover, button:focus {
   margin: 2.5rem 0;
 }
 
+.about button {
+  width: auto;
+}
+
 .about .facts {
   width: 44%;
 }
@@ -758,6 +771,39 @@ button:hover, button:focus {
 .about .square:hover, .about .square:focus {
   position: relative;
   top: -1.5rem;
+}
+
+@media (max-width: 900px) {
+  .about a, .about p {
+    font-size: 1.7rem;
+  }
+  .about h6 {
+    font-size: 1.7rem;
+  }
+  .about .square {
+    font-size: 1.7rem;
+  }
+  .about h5 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .about {
+    height: auto;
+  }
+  .about .aboutMe {
+    width: 100%;
+  }
+  .about .facts {
+    display: none;
+  }
+  .about h3 {
+    font-size: 6rem;
+  }
+  .about p, .about a, .about h6 {
+    font-size: 3rem;
+  }
 }
 
 :root {

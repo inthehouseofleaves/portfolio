@@ -46,6 +46,9 @@
     width: 100%;
     margin: 2.5rem 0;
   }
+  button {
+    width: auto;
+  }
   // RIGHT SIDE
   .facts {
     width: 44%;
@@ -63,4 +66,39 @@
       top: -1.5rem;
     }
   }
+
+  @media (max-width: 900px){
+    a, p {
+      font-size: 1.7rem;
+    }
+    h6 {
+      font-size: 1.7rem;
+    }
+    .square {
+      font-size: 1.7rem;
+    }
+    h5 {
+      font-size: 2.2rem;
+    }
+  }
+
+  // TABLET
+  @media (max-width: 780px){
+    height: auto;
+    .aboutMe {
+      width: 100%;
+    }
+    .facts {
+      display: none;
+    }
+    h3 {
+      font-size: 6rem;
+    }
+    p, a, h6 {
+      font-size: 3rem;
+    }
+  }
+
+
 }
+
