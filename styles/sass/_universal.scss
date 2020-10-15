@@ -32,7 +32,8 @@ body {
 }
 
 // NAV
-nav {
+.desktopNav,
+.alternateNav {
   display: flex;
   width: 100%;
   height: 8rem;
@@ -86,8 +87,18 @@ nav {
   }
 }
 
+@media (min-width: 801px){
+  .alternateNav {
+    display: none;
+  }
+}
+
 @media (max-width: 800px){
-  nav {
+  .desktopNav {
+    display: none;
+  }
+  .alternateNav {
+    display: flex;
     .logo {
       display: none;
     }
@@ -97,19 +108,19 @@ nav {
     li{
       display: flex;
       width: calc(100%/6);
+      border: 0.1rem solid var(--mainColor);
     }
     a {
-      font-size: 1.7rem;
+      font-size: 3rem;
       width: 100%;
     }
   }
 }
 
-@media (max-width: 700px){
-  nav {
+@media (max-width: 500px){
+  .alternateNav {
     a {
-      font-size: 1.4rem;
-      width: 100%;
+      font-size: 2.5rem;
     }
   }
 }

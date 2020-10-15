@@ -36,7 +36,6 @@
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
-    margin-top: 10rem;
   }
   .aboutMe {
     width: 52%;
@@ -93,7 +92,6 @@
 
   // TABLET
   @media (max-width: 800px){
-    height: calc (100 - 5rem);
     .aboutMe {
       width: 100%;
     }

@@ -266,7 +266,8 @@ body {
   margin: 0 auto;
 }
 
-nav {
+.desktopNav,
+.alternateNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +279,8 @@ nav {
   top: 0;
 }
 
-nav .logo {
+.desktopNav .logo,
+.alternateNav .logo {
   position: relative;
   left: 7rem;
   display: -webkit-box;
@@ -293,14 +295,16 @@ nav .logo {
   text-align: center;
 }
 
-nav .logo p {
+.desktopNav .logo p,
+.alternateNav .logo p {
   display: inline-block;
   padding: 1.2rem 2rem;
   border: 0.2rem solid var(--accentColor);
   border-radius: 50%;
 }
 
-nav ul {
+.desktopNav ul,
+.alternateNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,7 +314,8 @@ nav ul {
   width: 100%;
 }
 
-nav li {
+.desktopNav li,
+.alternateNav li {
   list-style-type: none;
   width: calc(100%/7.5);
   display: -webkit-box;
@@ -326,12 +331,15 @@ nav li {
   position: relative;
 }
 
-nav a {
+.desktopNav a,
+.alternateNav a {
   text-transform: uppercase;
   color: var(--accentColor);
 }
 
-nav a:hover, nav a:focus {
+.desktopNav a:hover, .desktopNav a:focus,
+.alternateNav a:hover,
+.alternateNav a:focus {
   color: var(--textColor);
 }
 
@@ -341,29 +349,43 @@ nav a:hover, nav a:focus {
   }
 }
 
-@media (max-width: 800px) {
-  nav .logo {
+@media (min-width: 801px) {
+  .alternateNav {
     display: none;
   }
-  nav ul {
+}
+
+@media (max-width: 800px) {
+  .desktopNav {
+    display: none;
+  }
+  .alternateNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .alternateNav .logo {
+    display: none;
+  }
+  .alternateNav ul {
     padding-left: 0 2rem;
   }
-  nav li {
+  .alternateNav li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: calc(100%/6);
+    border: 0.1rem solid var(--mainColor);
   }
-  nav a {
-    font-size: 1.7rem;
+  .alternateNav a {
+    font-size: 3rem;
     width: 100%;
   }
 }
 
-@media (max-width: 700px) {
-  nav a {
-    font-size: 1.4rem;
-    width: 100%;
+@media (max-width: 500px) {
+  .alternateNav a {
+    font-size: 2.5rem;
   }
 }
 
@@ -731,7 +753,6 @@ button:hover, button:focus {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 10rem;
 }
 
 .about .aboutMe {
@@ -796,9 +817,6 @@ button:hover, button:focus {
 }
 
 @media (max-width: 800px) {
-  .about {
-    height: calc 95rem;
-  }
   .about .aboutMe {
     width: 100%;
   }
@@ -1350,6 +1368,15 @@ button:hover, button:focus {
 
 .cvPage button {
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 800px) {
@@ -1392,6 +1419,7 @@ button:hover, button:focus {
   .cvPage .imgContainer,
   .cvPage button {
     width: 80%;
+    padding: 1.5rem;
   }
   .cvPage .buttonContainer {
     width: 100%;

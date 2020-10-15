@@ -60,6 +60,9 @@
   }
   button {
     width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   // TABLET MEDIA QUERY
@@ -96,6 +99,7 @@
     .imgContainer,
     button {
       width: 80%;
+      padding: 1.5rem;
     }
     .buttonContainer {
       width: 100%;
