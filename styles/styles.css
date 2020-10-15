@@ -505,6 +505,10 @@ button:hover, button:focus {
   --opacity: rgba(255,255,255, 0.2);
 }
 
+.wholeAssPage {
+  height: 100vh;
+}
+
 .homePage {
   margin-top: 10rem;
   height: calc(100vh - 15rem);
@@ -569,6 +573,14 @@ button:hover, button:focus {
 }
 
 @media (max-width: 901px) {
+  .homePage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .homePage .profilePic {
     display: none;
   }
@@ -617,9 +629,6 @@ button:hover, button:focus {
 }
 
 @media (max-width: 800px) {
-  .homePage {
-    height: calc(100vh - 15rem);
-  }
   .homePage .info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -644,10 +653,10 @@ button:hover, button:focus {
 
 @media (max-width: 500px) {
   .homePage h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   .homePage p {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
   .homePage .buttonContainer {
     width: 100%;
@@ -659,17 +668,8 @@ button:hover, button:focus {
     width: 100%;
   }
   .homePage button {
-    font-size: 1.7rem;
+    font-size: 2rem;
     width: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .homePage h1 {
-    font-size: 2.8rem;
-  }
-  .homePage p, .homePage button {
-    font-size: 1.5rem;
   }
 }
 

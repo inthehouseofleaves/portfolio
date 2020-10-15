@@ -10,11 +10,13 @@
   --opacity: rgba(255,255,255, 0.2);
 }
 
+.wholeAssPage {
+  height: 100vh;
+}
 .homePage {
   margin-top: 10rem;
   height: calc(100vh - 15rem);
   display: flex;
-
   .home {
     height: 100%;
     display: flex;
@@ -56,6 +58,8 @@
 
 @media (max-width: 901px){
   .homePage {
+    display: flex;
+    align-items: center;
     .profilePic {
       display: none;
     }
@@ -90,7 +94,6 @@
 // TABLET
 @media (max-width: 800px){
   .homePage {
-    height: calc(100vh - 15rem);
     .info {
       display: flex;
       align-items: center;
@@ -115,10 +118,10 @@
 @media (max-width: 500px){
   .homePage {
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
     p {
-      font-size: 1.7rem;
+      font-size: 2rem;
     }
     .buttonContainer {
       width: 100%;
@@ -128,19 +131,8 @@
       width: 100%;
     }
     button {
-      font-size: 1.7rem;
+      font-size: 2rem;
       width: 100%;
-    }
-  }
-}
-
-@media (max-width: 500px){
-  .homePage {
-    h1 {
-      font-size: 2.8rem
-    }
-    p, button {
-      font-size: 1.5rem;
     }
   }
 }
