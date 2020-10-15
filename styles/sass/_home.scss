@@ -88,9 +88,9 @@
 }
 
 // TABLET
-@media (max-width: 780px){
+@media (max-width: 800px){
   .homePage {
-    height: calc(auto - 5rem);
+    height: calc(100vh - 15rem);
     .info {
       display: flex;
       align-items: center;

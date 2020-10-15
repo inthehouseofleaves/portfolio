@@ -341,7 +341,7 @@ nav a:hover, nav a:focus {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   nav .logo {
     display: none;
   }
@@ -382,7 +382,7 @@ h1 {
 
 h2 {
   font-size: 4rem;
-  border: 5px solid var(--accentColor);
+  border-bottom: 5px solid var(--accentColor);
   text-align: center;
 }
 
@@ -616,9 +616,9 @@ button:hover, button:focus {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .homePage {
-    height: calc(auto - 5rem);
+    height: calc(100vh - 15rem);
   }
   .homePage .info {
     display: -webkit-box;
@@ -788,9 +788,9 @@ button:hover, button:focus {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .about {
-    height: auto;
+    height: calc 95rem;
   }
   .about .aboutMe {
     width: 100%;
@@ -802,7 +802,16 @@ button:hover, button:focus {
     font-size: 6rem;
   }
   .about p, .about a, .about h6 {
-    font-size: 3rem;
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .about {
+    height: calc(100vh - 5rem);
+  }
+  .about p, .about a, .about h6 {
+    font-size: 1.7rem;
   }
 }
 
@@ -943,6 +952,16 @@ button:hover, button:focus {
   background: rgba(7, 7, 8, 0.2);
 }
 
+.servicesPage h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .servicesPage .fas,
 .servicesPage .fab {
   display: -webkit-box;
@@ -979,7 +998,15 @@ button:hover, button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 5rem;
-  height: 100vh;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1370px;
 }
 
 .servicesPage .skillsAndAwards .skills {
@@ -1029,15 +1056,48 @@ button:hover, button:focus {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    height: auto;
   }
 }
 
-@media (max-width: 1200px) {
-  .service {
-    width: 50vw;
+@media (max-width: 900px) {
+  .servicesPage .services {
+    margin-bottom: 0;
   }
-  .service:hover, .service:focus {
-    background: rgba(7, 7, 8, 0.2);
+  .servicesPage .skillsAndAwards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .servicesPage .anotherSquaresDiv {
+    width: 75vw;
+  }
+  .servicesPage .square {
+    width: 100%;
+  }
+  .servicesPage h3 {
+    font-size: 3.5rem;
+  }
+  .servicesPage p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .servicesPage .skills .square {
+    width: 35vw;
+  }
+  .servicesPage h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 451px) {
+  .servicesPage .skills .square {
+    width: 80vw;
   }
 }
 
@@ -1223,7 +1283,7 @@ button:hover, button:focus {
 
 .cvPage .resume .imgContainer {
   background-image: url(../../assets/resumeScreenshot.png);
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 
@@ -1238,6 +1298,58 @@ button:hover, button:focus {
 
 .cvPage button {
   width: auto;
+}
+
+@media (max-width: 800px) {
+  .cvPage {
+    height: 100vh;
+  }
+  .cvPage .cvContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cvPage .resume,
+  .cvPage .coverLetter {
+    width: 100%;
+    height: 100%;
+  }
+  .cvPage .coverLetter {
+    margin-top: 5rem;
+  }
+  .cvPage .imgContainer {
+    width: 50%;
+    height: 100%;
+  }
+  .cvPage button {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cvPage button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .cvPage .imgContainer,
+  .cvPage button {
+    width: 80%;
+  }
+  .cvPage .buttonContainer {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 :root {
@@ -1384,10 +1496,4 @@ footer {
 footer a:hover,
 footer a:focus {
   color: var(--mainColor);
-}
-
-@media (max-width: 500px) {
-  footer {
-    font-size: 1.5rem;
-  }
 }

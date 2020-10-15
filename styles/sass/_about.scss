@@ -83,8 +83,9 @@
   }
 
   // TABLET
-  @media (max-width: 780px){
-    height: auto;
+  @media (max-width: 800px){
+    height: calc (100 - 5rem);
+    // height auto???
     .aboutMe {
       width: 100%;
     }
@@ -95,7 +96,14 @@
       font-size: 6rem;
     }
     p, a, h6 {
-      font-size: 3rem;
+      font-size: 2.7rem;
+    }
+  }
+
+  @media (max-width: 550px){
+    height: calc(100vh - 5rem);
+    p, a, h6 {
+      font-size: 1.7rem;
     }
   }
 

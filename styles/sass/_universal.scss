@@ -86,7 +86,7 @@ nav {
   }
 }
 
-@media (max-width: 780px){
+@media (max-width: 800px){
   nav {
     .logo {
       display: none;
@@ -128,7 +128,7 @@ h1 {
 }
 h2 {
   font-size: 4rem;
-  border: 5px solid var(--accentColor);
+  border-bottom: 5px solid var(--accentColor);
   text-align: center;
 }
 h3 {
