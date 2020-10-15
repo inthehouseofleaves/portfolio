@@ -1288,15 +1288,20 @@ button:hover, button:focus {
   top: -1.5rem;
 }
 
+.cvPage .imgContainer {
+  background: white;
+}
+
 .cvPage .resume .imgContainer {
-  background-image: url(../../assets/resumeScreenshot.png);
-  background-position: top center;
+  background-image: url(https://img.icons8.com/ios/452/resume.png);
+  background-position: center;
   background-size: cover;
 }
 
 .cvPage .coverLetter .imgContainer {
-  background-image: url(../../assets/girl.jpg);
+  background-image: url(https://static.thenounproject.com/png/440104-200.png);
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cvPage .buttonContainer {
@@ -1464,13 +1469,14 @@ button:hover, button:focus {
       -ms-flex-align: center;
           align-items: center;
   width: 40%;
+  background-color: var(--opacity);
 }
 
 .contactPage .picOfYou {
   height: 100%;
   width: 100%;
   border: 0.5rem solid var(--textColor);
-  background-image: url(../../assets/london1.JPG);
+  background-image: url(https://icons.iconarchive.com/icons/dapino/teenage-girl/256/girl-swear-icon.png);
   background-size: cover;
   background-position: center;
 }

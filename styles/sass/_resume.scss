@@ -42,14 +42,18 @@
       top: -1.5rem;
     }
   }
+  .imgContainer {
+    background: white;
+  }
   .resume .imgContainer {
-    background-image: url(../../assets/resumeScreenshot.png);
-    background-position: top center;
+    background-image: url(https://img.icons8.com/ios/452/resume.png);
+    background-position: center;
     background-size: cover;
   }
   .coverLetter .imgContainer {
-    background-image: url(../../assets/girl.jpg);
-    background-position: center
+    background-image: url(https://static.thenounproject.com/png/440104-200.png);
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .buttonContainer {
     margin-top: 3rem;

@@ -69,12 +69,13 @@
     justify-content: center;
     align-items: center;
     width: 40%;
+    background-color: var(--opacity);
   }
   .picOfYou {
     height: 100%;
     width: 100%;
     border: 0.5rem solid var(--textColor);
-    background-image: url(../../assets/london1.JPG);
+    background-image: url(https://icons.iconarchive.com/icons/dapino/teenage-girl/256/girl-swear-icon.png);
     background-size: cover;
     background-position: center;
   }
