@@ -1095,9 +1095,15 @@ button:hover, button:focus {
   }
 }
 
-@media (max-width: 451px) {
-  .servicesPage .skills .square {
+@media (max-width: 426px) {
+  .servicesPage .anotherSquaresDiv {
     width: 80vw;
+  }
+  .servicesPage h3 {
+    font-size: 2.7rem;
+  }
+  .servicesPage p {
+    font-size: 1.5rem;
   }
 }
 
