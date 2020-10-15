@@ -1218,6 +1218,13 @@ button:hover, button:focus {
   }
 }
 
+@media (max-width: 550px) {
+  .projectsPage .work {
+    height: 153px;
+    width: 255px;
+  }
+}
+
 :root {
   --headerFont: "Poppins", sans-serif;
   --bodyFont: "Mulish", sans-serif;
