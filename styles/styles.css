@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 5.5rem;
   color: var(--accentColor);
 }
 
@@ -561,6 +561,10 @@ button:hover, button:focus {
   text-align: left;
 }
 
+.homePage p {
+  font-size: 3rem;
+}
+
 .homePage .profilePic {
   margin-top: 1.5rem;
   -webkit-box-align: center;
@@ -659,23 +663,41 @@ button:hover, button:focus {
   .homePage h1 {
     font-size: 6rem;
   }
-  .homePage p, .homePage a, .homePage h6 {
-    font-size: 2rem;
+  .homePage a, .homePage h6 {
+    font-size: 2.5rem;
+  }
+  .homePage p {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 776px) {
+  .homePage h1 {
+    font-size: 5rem;
+  }
+  .homePage p {
+    font-size: 2.8rem;
+  }
+  .homePage a, .homePage h6 {
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 650px) {
   .homePage h1 {
-    font-size: 3.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .homePage h1 {
     font-size: 4rem;
   }
   .homePage p {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 516px) {
+  .homePage h1 {
+    font-size: 3.5rem;
+  }
+  .homePage p {
+    font-size: 1.8rem;
   }
   .homePage .buttonContainer {
     width: 100%;
@@ -689,6 +711,18 @@ button:hover, button:focus {
   .homePage button {
     font-size: 2rem;
     width: 100%;
+  }
+  .homePage a, .homePage h6 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 453px) {
+  .homePage h1 {
+    font-size: 3rem;
+  }
+  .homePage a, .homePage h6 {
+    font-size: 2.5rem;
   }
 }
 
@@ -831,6 +865,12 @@ button:hover, button:focus {
   }
 }
 
+@media (max-width: 645px) {
+  .about h3 {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 550px) {
   .about {
     height: calc(100vh - 5rem);
@@ -843,6 +883,24 @@ button:hover, button:focus {
   }
   .about button {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .about h3 {
+    font-size: 3.8rem;
+  }
+  .about p, .about a, .about h6 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 315px) {
+  .about h3 {
+    font-size: 3.2rem;
+  }
+  .about p, .about a, .about h6 {
+    font-size: 1.3rem;
   }
 }
 

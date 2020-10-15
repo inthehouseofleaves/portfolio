@@ -106,6 +106,12 @@
     }
   }
 
+  @media (max-width: 645px){
+    h3 {
+      font-size: 4rem;
+    }
+  }
+
   @media (max-width: 550px){
     height: calc(100vh - 5rem);
     h3 {
@@ -116,6 +122,24 @@
     }
     button {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 420px){
+    h3 {
+      font-size: 3.8rem;
+    }
+    p, a, h6 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 315px){
+    h3 {
+      font-size: 3.2rem;
+    }
+    p, a, h6 {
+      font-size: 1.3rem;
     }
   }
 
