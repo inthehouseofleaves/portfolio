@@ -505,13 +505,9 @@ button:hover, button:focus {
   --opacity: rgba(255,255,255, 0.2);
 }
 
-.wholeAssPage {
-  height: 100vh;
-}
-
 .homePage {
   margin-top: 10rem;
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 10rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,7 +550,7 @@ button:hover, button:focus {
 .homePage .picOfYou {
   width: 85%;
   height: 85%;
-  background-image: url(../../assets/profilePic.JPG);
+  background-image: url(https://cdn.icon-icons.com/icons2/546/PNG/512/1455554992_users-14_icon-icons.com_53277.png);
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
@@ -563,6 +559,7 @@ button:hover, button:focus {
           box-shadow: 1rem 1rem var(--accentColor);
   position: relative;
   top: 0;
+  background-color: var(--opacity);
   -webkit-transition: top ease 0.5s;
   transition: top ease 0.5s;
 }
@@ -683,6 +680,10 @@ button:hover, button:focus {
   --opacity: rgba(255,255,255, 0.2);
 }
 
+.aboutPage {
+  margin-top: 10rem;
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -694,7 +695,7 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 20rem);
 }
 
 .about .calendly,
@@ -773,6 +774,12 @@ button:hover, button:focus {
   top: -1.5rem;
 }
 
+@media (max-width: 965px) {
+  .about h5 {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 900px) {
   .about a, .about p {
     font-size: 1.7rem;
@@ -799,10 +806,10 @@ button:hover, button:focus {
     display: none;
   }
   .about h3 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .about p, .about a, .about h6 {
-    font-size: 2.7rem;
+    font-size: 2rem;
   }
 }
 
@@ -810,8 +817,14 @@ button:hover, button:focus {
   .about {
     height: calc(100vh - 5rem);
   }
-  .about p, .about a, .about h6 {
-    font-size: 1.7rem;
+  .about h3 {
+    font-size: 4.5rem;
+  }
+  .about .buttonContainer {
+    width: 100%;
+  }
+  .about button {
+    width: 100%;
   }
 }
 
@@ -883,6 +896,12 @@ button:hover, button:focus {
   display: inline-block;
   text-transform: uppercase;
   padding: 0.2rem 0.5rem;
+}
+
+@media (max-width: 450px) {
+  .experiencePage .skills {
+    border: red solid 1px;
+  }
 }
 
 :root {
@@ -1095,7 +1114,7 @@ button:hover, button:focus {
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 450px) {
   .servicesPage .anotherSquaresDiv {
     width: 80vw;
   }
@@ -1104,6 +1123,12 @@ button:hover, button:focus {
   }
   .servicesPage p {
     font-size: 1.5rem;
+  }
+  .servicesPage .skills {
+    width: 100%;
+  }
+  .servicesPage .skills .square {
+    width: 100%;
   }
 }
 
@@ -1225,6 +1250,15 @@ button:hover, button:focus {
 }
 
 @media (max-width: 550px) {
+  .projectsPage .anotherSquaresDiv {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .projectsPage .work {
     height: 153px;
     width: 255px;
@@ -1384,11 +1418,6 @@ button:hover, button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  height: 90vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1406,7 +1435,7 @@ button:hover, button:focus {
   margin-top: 20vh;
   border: solid 2px var(--textColor);
   width: 80%;
-  height: 60vh;
+  height: auto;
   -webkit-box-shadow: 2rem 2rem var(--accentColor);
           box-shadow: 2rem 2rem var(--accentColor);
   padding: 2.5rem;
@@ -1461,7 +1490,7 @@ button:hover, button:focus {
 }
 
 .contactPage .socials {
-  margin: 0;
+  margin: 0 1rem;
 }
 
 .contactPage .profilePic {
@@ -1482,9 +1511,50 @@ button:hover, button:focus {
   height: 100%;
   width: 100%;
   border: 0.5rem solid var(--textColor);
-  background-image: url(https://icons.iconarchive.com/icons/dapino/teenage-girl/256/girl-swear-icon.png);
+  background-image: url(https://cdn.icon-icons.com/icons2/546/PNG/512/1455554992_users-14_icon-icons.com_53277.png);
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 882px) {
+  .contactPage .contactPage {
+    height: calc(100vh - 5rem);
+  }
+  .contactPage .contactInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactPage .contact {
+    width: 100%;
+  }
+  .contactPage .profilePic {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .contactPage .contactInfo {
+    height: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .contactPage .contactInfo {
+    padding: 2rem 0.1rem;
+    width: 100%;
+    -webkit-box-shadow: 0.8rem 0.8rem var(--accentColor);
+            box-shadow: 0.8rem 0.8rem var(--accentColor);
+  }
+  .contactPage p {
+    font-size: 1.4rem;
+  }
 }
 
 :root {

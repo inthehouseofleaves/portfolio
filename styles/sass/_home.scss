@@ -10,12 +10,9 @@
   --opacity: rgba(255,255,255, 0.2);
 }
 
-.wholeAssPage {
-  height: 100vh;
-}
 .homePage {
   margin-top: 10rem;
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 10rem);
   display: flex;
   .home {
     height: 100%;
@@ -39,7 +36,7 @@
   .picOfYou {
     width: 85%;
     height: 85%;
-    background-image: url(../../assets/profilePic.JPG);
+    background-image: url(https://cdn.icon-icons.com/icons2/546/PNG/512/1455554992_users-14_icon-icons.com_53277.png);
     background-size: cover;
     background-position: center;
     border-radius: 2rem;
@@ -47,6 +44,7 @@
     box-shadow: 1rem 1rem var(--accentColor);
     position: relative;
     top: 0;
+    background-color: var(--opacity);
     transition: top ease 0.5s;
     &:hover,
     &:focus {

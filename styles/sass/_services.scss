@@ -150,7 +150,7 @@
     }
   }
 
-  @media (max-width: 426px){
+  @media (max-width: 450px){
     .anotherSquaresDiv {
       width: 80vw;
     }
@@ -159,6 +159,12 @@
     }
     p {
       font-size: 1.5rem;
+    }
+    .skills {
+      width: 100%;
+      .square {
+        width: 100%;
+      }
     }
   }
 }

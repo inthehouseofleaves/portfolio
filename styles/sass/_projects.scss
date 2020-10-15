@@ -103,6 +103,11 @@
 
 @media (max-width: 550px){
   .projectsPage{
+    .anotherSquaresDiv {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
     .work {
       height: 153px;
       width: 255px;

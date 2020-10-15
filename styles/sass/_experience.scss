@@ -52,4 +52,10 @@
     padding: 0.2rem 0.5rem;
   }
 
+  @media (max-width: 450px){
+    .skills {
+      border: red solid 1px;
+    }
+  }
+
 }

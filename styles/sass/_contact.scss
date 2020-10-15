@@ -12,8 +12,6 @@
 
 .contactPage {
   display: flex;
-  flex-direction: row-reverse;
-  height: 90vh;
   justify-content: center;
   align-items: flex-start;
   height: calc(100vh - 5rem);
@@ -25,7 +23,7 @@
     margin-top: 20vh;
     border: solid 2px var(--textColor);
     width: 80%;
-    height: 60vh;
+    height: auto;
     box-shadow: 2rem 2rem var(--accentColor);
     padding: 2.5rem;
     top: 0;
@@ -60,7 +58,7 @@
     }
   }
   .socials {
-    margin: 0;
+    margin: 0 1rem;
   }
 
   // RIGHT SIDE: PROFILE PIC SECTION
@@ -75,8 +73,43 @@
     height: 100%;
     width: 100%;
     border: 0.5rem solid var(--textColor);
-    background-image: url(https://icons.iconarchive.com/icons/dapino/teenage-girl/256/girl-swear-icon.png);
+    background-image: url(https://cdn.icon-icons.com/icons2/546/PNG/512/1455554992_users-14_icon-icons.com_53277.png);
     background-size: cover;
     background-position: center;
   }
+
+  @media (max-width: 882px){
+    .contactPage {
+      height: calc(100vh - 5rem);
+    }
+    .contactInfo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact {
+      width: 100%;
+    }
+    .profilePic {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px){
+    .contactInfo {
+      height: auto;
+    }
+  }
+
+  @media (max-width: 440px){
+    .contactInfo {
+      padding: 2rem 0.1rem;
+      width: 100%;
+      box-shadow: 0.8rem 0.8rem var(--accentColor);
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
 }
