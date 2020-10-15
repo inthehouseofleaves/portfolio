@@ -751,7 +751,7 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: calc(100vh - 20rem);
+  height: calc(100vh - 15rem);
 }
 
 .about .calendly,
@@ -901,82 +901,6 @@ button:hover, button:focus {
   }
   .about p, .about a, .about h6 {
     font-size: 1.3rem;
-  }
-}
-
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
-}
-
-.experiencePage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: auto;
-  margin-bottom: 5rem;
-}
-
-.experiencePage h2 {
-  margin-bottom: 5rem;
-}
-
-.experiencePage .experience {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 3rem 0;
-}
-
-.experiencePage .work,
-.experiencePage .education {
-  padding: 0 1.5rem;
-  background-color: var(--secondaryColor);
-  border-radius: 5rem;
-  width: 48%;
-}
-
-.experiencePage .job,
-.experiencePage .school {
-  margin: 3rem 0;
-}
-
-.experiencePage .job li,
-.experiencePage .school li {
-  list-style-position: inside;
-}
-
-.experiencePage .contain {
-  border-left: 1px solid var(--accentColor);
-  padding: 0.5rem 3rem;
-}
-
-.experiencePage .contain p {
-  font-size: 1.5rem;
-}
-
-.experiencePage .dates {
-  background-color: var(--accentColor);
-  display: inline-block;
-  text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-}
-
-@media (max-width: 450px) {
-  .experiencePage .skills {
-    border: red solid 1px;
   }
 }
 
@@ -1298,10 +1222,6 @@ button:hover, button:focus {
 
 .projectsPage #santa {
   background-image: url(https://cdn.dribbble.com/users/1093412/screenshots/5757505/santa_claus_levitating.png);
-}
-
-.projectsPage #test {
-  background-image: url(../../assets/pikachu.jpg);
 }
 
 @media (max-width: 1200px) {
