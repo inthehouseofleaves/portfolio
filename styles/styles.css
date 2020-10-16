@@ -917,7 +917,16 @@ button:hover, button:focus {
   .about h3 {
     font-size: 3.8rem;
   }
-  .about p, .about a, .about h6 {
+  .about a, .about h6 {
+    font-size: 1.8rem;
+  }
+  .about .phone p, .about .phone a, .about .phone h6,
+  .about .email p,
+  .about .email a,
+  .about .email h6,
+  .about .calendly p,
+  .about .calendly a,
+  .about .calendly h6 {
     font-size: 1.8rem;
   }
 }
@@ -926,7 +935,12 @@ button:hover, button:focus {
   .about h3 {
     font-size: 3.2rem;
   }
-  .about p, .about a, .about h6 {
+  .about p {
+    font-size: 1.8rem;
+  }
+  .about .phone,
+  .about .email,
+  .about .calendly {
     font-size: 1.3rem;
   }
 }

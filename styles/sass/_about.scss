@@ -128,8 +128,15 @@
     h3 {
       font-size: 3.8rem;
     }
-    p, a, h6 {
+    a, h6 {
       font-size: 1.8rem;
+    }
+    .phone,
+    .email,
+    .calendly {
+      p, a, h6 {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -137,11 +144,13 @@
     h3 {
       font-size: 3.2rem;
     }
-    p, a, h6 {
+    p {
+      font-size: 1.8rem;
+    }
+    .phone,
+    .email,
+    .calendly {
       font-size: 1.3rem;
     }
   }
-
-
 }
-
