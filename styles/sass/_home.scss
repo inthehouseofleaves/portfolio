@@ -168,9 +168,12 @@
   .homePage {
     height: calc(100vh - 5rem);
     h1 {
-      font-size: 3rem;
+      font-size: 4.5rem;
     }
-    a, h6 {
+    p {
+      font-size: 2rem;
+    }
+    p, a, h6 {
       font-size: 2.5rem;
     }
   }
