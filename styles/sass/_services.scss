@@ -50,11 +50,6 @@
       background: rgba(7,7,8, 0.2);
     }
   }
-  h2 {
-    display: flex;
-    margin: 5rem 0;
-    justify-content: center;
-  }
   .fas,
   .fab {
     display: flex;
@@ -69,6 +64,11 @@
   .fas {
     position: relative;
     bottom: 50px;
+  }
+  h2 {
+    display: flex;
+    margin: 5rem 0;
+    justify-content: center;
   }
   .serviceContent {
     position: relative;

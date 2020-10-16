@@ -51,12 +51,15 @@
     flex-direction: column;
     font-size: 80%;
     padding: 1rem 1.5rem;
-    i {
-      margin-right: 0.5rem;
-    }
+  }
+  p, h6 {
+    font-size: 2.2rem;
   }
   .socials {
     margin: 0 1rem;
+  }
+  i {
+      margin-right: 0.5rem;
   }
 
   // RIGHT SIDE: PROFILE PIC SECTION

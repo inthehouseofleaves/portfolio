@@ -103,7 +103,7 @@
     h1 {
         font-size: 6rem;
       }
-    a, h6 {
+    a {
       font-size: 2.5rem;
     }
     p {
@@ -121,7 +121,7 @@
     p {
       font-size: 2.8rem;
     }
-    a, h6 {
+    a {
       font-size: 3rem;
     }
   }
@@ -153,13 +153,11 @@
     }
     a {
       width: 100%;
+      font-size: 2.8rem;
     }
     button {
       font-size: 2rem;
       width: 100%;
-    }
-    a, h6 {
-      font-size: 2.8rem;
     }
   }
 }
@@ -170,11 +168,8 @@
     h1 {
       font-size: 4.5rem;
     }
-    p {
+    p, a {
       font-size: 2rem;
-    }
-    p, a, h6 {
-      font-size: 2.5rem;
     }
   }
 }

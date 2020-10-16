@@ -333,6 +333,17 @@ body {
 
 .desktopNav a,
 .alternateNav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   color: var(--accentColor);
 }
@@ -341,6 +352,21 @@ body {
 .alternateNav a:hover,
 .alternateNav a:focus {
   color: var(--textColor);
+}
+
+.desktopNav i,
+.alternateNav i {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 900px) {
@@ -666,7 +692,7 @@ button:hover, button:focus {
   .homePage h1 {
     font-size: 6rem;
   }
-  .homePage a, .homePage h6 {
+  .homePage a {
     font-size: 2.5rem;
   }
   .homePage p {
@@ -681,7 +707,7 @@ button:hover, button:focus {
   .homePage p {
     font-size: 2.8rem;
   }
-  .homePage a, .homePage h6 {
+  .homePage a {
     font-size: 3rem;
   }
 }
@@ -710,13 +736,11 @@ button:hover, button:focus {
   }
   .homePage a {
     width: 100%;
+    font-size: 2.8rem;
   }
   .homePage button {
     font-size: 2rem;
     width: 100%;
-  }
-  .homePage a, .homePage h6 {
-    font-size: 2.8rem;
   }
 }
 
@@ -727,11 +751,8 @@ button:hover, button:focus {
   .homePage h1 {
     font-size: 4.5rem;
   }
-  .homePage p {
+  .homePage p, .homePage a {
     font-size: 2rem;
-  }
-  .homePage p, .homePage a, .homePage h6 {
-    font-size: 2.5rem;
   }
 }
 
@@ -894,19 +915,10 @@ button:hover, button:focus {
 
 @media (max-width: 420px) {
   .about h3 {
-    font-size: 4rem;
-  }
-  .about p, .about a, .about h6 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .about h3 {
     font-size: 3.8rem;
   }
   .about p, .about a, .about h6 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -986,16 +998,6 @@ button:hover, button:focus {
   background: rgba(7, 7, 8, 0.2);
 }
 
-.servicesPage h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 5rem 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .servicesPage .fas,
 .servicesPage .fab {
   display: -webkit-box;
@@ -1017,6 +1019,16 @@ button:hover, button:focus {
 .servicesPage .fas {
   position: relative;
   bottom: 50px;
+}
+
+.servicesPage h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .servicesPage .serviceContent {
@@ -1510,14 +1522,16 @@ button:hover, button:focus {
   padding: 1rem 1.5rem;
 }
 
-.contactPage .calendly i,
-.contactPage .phone i,
-.contactPage .email i {
-  margin-right: 0.5rem;
+.contactPage p, .contactPage h6 {
+  font-size: 2.2rem;
 }
 
 .contactPage .socials {
   margin: 0 1rem;
+}
+
+.contactPage i {
+  margin-right: 0.5rem;
 }
 
 .contactPage .profilePic {
