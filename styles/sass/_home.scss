@@ -11,8 +11,7 @@
 }
 
 .homePage {
-  margin-top: 10rem;
-  height: calc(100vh - 10rem);
+  height: 100vh;
   display: flex;
   .home {
     height: 100%;
@@ -22,11 +21,13 @@
   .profilePic {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .info {
     width: 60%;
     align-items: left;
     text-align: left;
+    padding-right: 1rem;
   }
   p {
     font-size: 3rem;
@@ -38,7 +39,7 @@
   }
   .picOfYou {
     width: 85%;
-    height: 85%;
+    height: 60%;
     background-image: url(https://cdn.icon-icons.com/icons2/546/PNG/512/1455554992_users-14_icon-icons.com_53277.png);
     background-size: cover;
     background-position: center;
@@ -116,7 +117,6 @@
   .homePage {
     h1 {
       font-size: 5rem;
-      // margin-top: 5rem;
     }
     p {
       font-size: 2.8rem;

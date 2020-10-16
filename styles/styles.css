@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 5.5rem;
+  font-size: 5rem;
   color: var(--accentColor);
 }
 
@@ -528,8 +528,7 @@ button:hover, button:focus {
 }
 
 .homePage {
-  margin-top: 10rem;
-  height: calc(100vh - 10rem);
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,6 +550,9 @@ button:hover, button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .homePage .info {
@@ -559,6 +561,7 @@ button:hover, button:focus {
       -ms-flex-align: left;
           align-items: left;
   text-align: left;
+  padding-right: 1rem;
 }
 
 .homePage p {
@@ -575,7 +578,7 @@ button:hover, button:focus {
 
 .homePage .picOfYou {
   width: 85%;
-  height: 85%;
+  height: 60%;
   background-image: url(https://cdn.icon-icons.com/icons2/546/PNG/512/1455554992_users-14_icon-icons.com_53277.png);
   background-size: cover;
   background-position: center;
@@ -1394,19 +1397,26 @@ button:hover, button:focus {
 }
 
 @media (max-width: 500px) {
-  .cvPage .imgContainer,
-  .cvPage button {
+  .cvPage .imgContainer {
     width: 80%;
-    padding: 1.5rem;
-  }
-  .cvPage .buttonContainer {
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .cvPage .buttonContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cvPage button {
+    padding: 1.5rem;
   }
 }
 
@@ -1427,9 +1437,9 @@ button:hover, button:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: calc(100vh - 5rem);
 }
 
@@ -1438,7 +1448,6 @@ button:hover, button:focus {
   display: -ms-flexbox;
   display: flex;
   background-color: var(--secondaryColor);
-  margin-top: 20vh;
   border: solid 2px var(--textColor);
   width: 80%;
   height: auto;
@@ -1468,7 +1477,7 @@ button:hover, button:focus {
 
 .contactPage .contactContainer {
   width: 100%;
-  height: 85%;
+  height: 80%;
 }
 
 .contactPage .square {

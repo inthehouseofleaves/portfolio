@@ -96,15 +96,18 @@
   }
 
   @media (max-width: 500px){
-    .imgContainer,
-    button {
+    .imgContainer {
       width: 80%;
-      padding: 1.5rem;
+      justify-content: center;
+      display: flex;
     }
     .buttonContainer {
       width: 100%;
-      justify-content: center;
       display: flex;
+      justify-content: center;
+    }
+    button {
+      padding: 1.5rem;
     }
   }
 
