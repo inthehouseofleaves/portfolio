@@ -1594,7 +1594,7 @@ button:hover, button:focus {
             box-shadow: 0.8rem 0.8rem var(--accentColor);
   }
   .contactPage p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
