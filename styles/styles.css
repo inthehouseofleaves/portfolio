@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: var(--accentColor);
 }
 
@@ -742,10 +742,6 @@ button:hover, button:focus {
   --opacity: rgba(255,255,255, 0.2);
 }
 
-.aboutPage {
-  margin-top: 10rem;
-}
-
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,7 +753,7 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 5rem);
 }
 
 .about .calendly,
@@ -799,8 +795,12 @@ button:hover, button:focus {
   width: 52%;
 }
 
+.about h3 {
+  font-size: 4rem;
+}
+
 .about .contactMe {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
 }
 
 .about .buttonContainer {
@@ -878,9 +878,6 @@ button:hover, button:focus {
 }
 
 @media (max-width: 550px) {
-  .about {
-    height: calc(100vh - 5rem);
-  }
   .about h3 {
     font-size: 4.5rem;
   }
