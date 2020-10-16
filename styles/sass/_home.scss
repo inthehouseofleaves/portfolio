@@ -166,6 +166,7 @@
 
 @media (max-width: 453px){
   .homePage {
+    height: calc(100vh - 5rem);
     h1 {
       font-size: 3rem;
     }
