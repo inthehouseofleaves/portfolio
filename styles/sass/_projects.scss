@@ -30,6 +30,7 @@
     h3 {
       margin-top: 1rem;
       font-size: 2.5rem;
+      text-decoration: underline;
     }
     .technical {
       font-size: 1.5rem; 
@@ -147,15 +148,38 @@
 }
 
 @media (max-width: 550px){
+  .wrapper {
+    width: 100%;
+  }
   .projectsPage{
     .anotherSquaresDiv {
       width: 100%;
       display: flex;
       justify-content: center;
+      h3 {
+        font-size: 2.3rem;
+      }
     }
     .work,
     .projectInfo {
-      width: 255px;
+      // width: 255px;
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 370px){
+    .wrapper {
+      width: 90%;
+    }
+    .projectsPage {
+      .anotherSquaresDiv {
+        padding: 0;
+        margin-bottom: 4rem;
+      }
+      .work,
+      .projectInfo {
+        width: 95%;
+      }
     }
   }
 }

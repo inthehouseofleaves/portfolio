@@ -1251,6 +1251,7 @@ button:hover, button:focus {
 .projectsPage .anotherSquaresDiv h3 {
   margin-top: 1rem;
   font-size: 2.5rem;
+  text-decoration: underline;
 }
 
 .projectsPage .anotherSquaresDiv .technical {
@@ -1362,6 +1363,9 @@ button:hover, button:focus {
 }
 
 @media (max-width: 550px) {
+  .wrapper {
+    width: 100%;
+  }
   .projectsPage .anotherSquaresDiv {
     width: 100%;
     display: -webkit-box;
@@ -1371,9 +1375,26 @@ button:hover, button:focus {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .projectsPage .anotherSquaresDiv h3 {
+    font-size: 2.3rem;
+  }
   .projectsPage .work,
   .projectsPage .projectInfo {
-    width: 255px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 550px) and (max-width: 370px) {
+  .wrapper {
+    width: 90%;
+  }
+  .projectsPage .anotherSquaresDiv {
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+  .projectsPage .work,
+  .projectsPage .projectInfo {
+    width: 95%;
   }
 }
 
