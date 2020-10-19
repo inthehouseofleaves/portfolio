@@ -587,7 +587,6 @@ button:hover, button:focus {
       -ms-flex-align: left;
           align-items: left;
   text-align: left;
-  padding-right: 1rem;
 }
 
 .homePage p {
@@ -632,9 +631,25 @@ button:hover, button:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .homePage .profilePic {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 8vh;
+    width: 100%;
+  }
+  .homePage .picOfYou {
+    height: 80%;
+    width: 75%;
   }
   .homePage h1 {
     text-align: center;
@@ -663,8 +678,6 @@ button:hover, button:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .homePage p {
     text-align: center;
   }
   .homePage .buttonContainer {
@@ -681,6 +694,10 @@ button:hover, button:focus {
 }
 
 @media (max-width: 800px) {
+  .homePage {
+    height: auto;
+    padding-bottom: 10rem;
+  }
   .homePage .info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -698,21 +715,21 @@ button:hover, button:focus {
   .homePage p {
     font-size: 3.5rem;
   }
-}
-
-@media (max-width: 776px) {
-  .homePage h1 {
-    font-size: 5rem;
-  }
-  .homePage p {
-    font-size: 2.8rem;
+  .homePage .buttonContainer {
+    width: 100%;
   }
   .homePage a {
-    font-size: 3rem;
+    width: 50%;
+  }
+  .homePage button {
+    width: 100%;
   }
 }
 
 @media (max-width: 650px) {
+  .homePage .profilePic {
+    margin-top: 10vh;
+  }
   .homePage h1 {
     font-size: 4rem;
   }
@@ -721,38 +738,32 @@ button:hover, button:focus {
   }
 }
 
-@media (max-width: 516px) {
-  .homePage h1 {
-    font-size: 3.5rem;
-  }
-  .homePage p {
-    font-size: 1.8rem;
-  }
-  .homePage .buttonContainer {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .homePage a {
-    width: 100%;
-    font-size: 2.8rem;
-  }
-  .homePage button {
-    font-size: 2rem;
-    width: 100%;
-  }
-}
-
 @media (max-width: 453px) {
-  .homePage {
-    height: calc(100vh - 5rem);
+  .homePage .profilePic {
+    height: 40vh;
+  }
+  .homePage .picOfYou {
+    height: 80%;
+    width: 90%;
   }
   .homePage h1 {
     font-size: 4.5rem;
   }
   .homePage p, .homePage a {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 354px) {
+  .homePage .profilePic {
+    height: 25vh;
+  }
+  .homePage .picOfYou {
+    height: 80%;
+    width: 90%;
+  }
+  .homePage h1 {
+    font-size: 3.7rem;
   }
 }
 
@@ -1012,11 +1023,7 @@ button:hover, button:focus {
   background: rgba(7, 7, 8, 0.2);
 }
 
-.servicesPage .fas,
-.servicesPage .fab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.servicesPage i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1028,6 +1035,18 @@ button:hover, button:focus {
   background-color: var(--accentColor);
   border: 1rem solid var(--mainColor);
   border-radius: 50%;
+  padding: 0;
+  font-size: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.servicesPage .fas,
+.servicesPage .fab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .servicesPage .fas {
@@ -1165,11 +1184,24 @@ button:hover, button:focus {
   .servicesPage p {
     font-size: 2rem;
   }
-  .servicesPage .skills {
-    width: 100%;
+  .servicesPage .skillsAndAwards .skills {
+    padding: 0 1rem;
   }
-  .servicesPage .skills .square {
+  .servicesPage .skillsAndAwards .skills .square {
     width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+    width: calc(100% / 3.1);
+    margin: 0 0.1rem;
+    background: transparent;
+  }
+  .servicesPage .skillsAndAwards .skills .square i {
+    background: none;
+    color: var(--accentColor);
+  }
+  .servicesPage .skillsAndAwards .skills .square p {
+    font-size: 1.7rem;
   }
 }
 
@@ -1202,14 +1234,42 @@ button:hover, button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
+  padding: 1rem 2rem 4rem 1rem;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectsPage .anotherSquaresDiv h3, .projectsPage .anotherSquaresDiv p {
+  text-align: center;
+}
+
+.projectsPage .anotherSquaresDiv h3 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.projectsPage .anotherSquaresDiv .technical {
+  font-size: 1.5rem;
+}
+
+.projectsPage .anotherSquaresDiv .description {
+  font-size: 1.7rem;
+  text-align: justify;
+  margin: 1.5rem 0 0 1rem;
+  color: var(--accentColor);
+}
+
+.projectsPage .work,
+.projectsPage .projectInfo {
+  width: 350px;
 }
 
 .projectsPage .work {
-  width: 350px;
   height: 210px;
   background-color: whitesmoke;
   position: relative;
@@ -1241,14 +1301,20 @@ button:hover, button:focus {
 }
 
 .projectsPage #plantProject {
+  background-image: url(https://i.pinimg.com/564x/b6/5e/0c/b65e0ce50750a67fd6960bcbca2de595.jpg);
+  background-position: center top;
+}
+
+.projectsPage #planted {
   background-image: url(https://i.pinimg.com/564x/00/77/c2/0077c2282b04ca5702e9c549b299641c.jpg);
 }
 
-.projectsPage #travel {
-  background-image: url(http://gdj.graphicdesignjunction.com/wp-content/uploads/2013/03/minimal+wallpapers+75.jpg);
+.projectsPage #panda {
+  background-image: url(https://i.pinimg.com/564x/f5/fb/f8/f5fbf8a33aa656f33e1312db9ebf8bd9.jpg);
+  background-position: center bottom;
 }
 
-.projectsPage #personal {
+.projectsPage #photography {
   background-image: url(https://cdn1.iconfinder.com/data/icons/family-avatar-solid-happy-party/1000/Asian_Female006-512.png);
   background-position: center top;
 }
@@ -1266,22 +1332,31 @@ button:hover, button:focus {
 }
 
 @media (max-width: 1200px) {
-  .projectsPage .work {
+  .projectsPage .work,
+  .projectsPage .projectInfo {
     width: 290px;
+  }
+  .projectsPage .work {
     height: 174px;
   }
 }
 
 @media (max-width: 992px) {
-  .projectsPage .work {
+  .projectsPage .work,
+  .projectsPage .projectInfo {
     width: 330px;
+  }
+  .projectsPage .work {
     height: 198px;
+  }
+  .projectsPage .anotherSquaresDiv .description {
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .projectsPage .work {
-    height: 306px;
+  .projectsPage .work,
+  .projectsPage .projectInfo {
     width: 510px;
   }
 }
@@ -1296,8 +1371,8 @@ button:hover, button:focus {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .projectsPage .work {
-    height: 153px;
+  .projectsPage .work,
+  .projectsPage .projectInfo {
     width: 255px;
   }
 }

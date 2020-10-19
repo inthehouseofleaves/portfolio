@@ -27,7 +27,6 @@
     width: 60%;
     align-items: left;
     text-align: left;
-    padding-right: 1rem;
   }
   p {
     font-size: 3rem;
@@ -61,8 +60,17 @@
   .homePage {
     display: flex;
     align-items: center;
+    flex-direction: column;
     .profilePic {
-      display: none;
+      display: flex;
+      height: 50vh;
+      justify-content: center;
+      margin-top: 8vh;
+      width: 100%;
+    }
+    .picOfYou {
+      height: 80%;
+      width: 75%;
     }
     h1 {
       text-align: center;
@@ -78,8 +86,6 @@
       width: 100%;
       display: flex;
       align-items: center;
-    }
-    p {
       text-align: center;
     }
     .buttonContainer {
@@ -96,6 +102,8 @@
 // TABLET
 @media (max-width: 800px){
   .homePage {
+    height: auto;
+    padding-bottom: 10rem;
     .info {
       display: flex;
       align-items: center;
@@ -109,27 +117,40 @@
     p {
       font-size: 3.5rem;
     }
-  }
-
-}
-
-@media (max-width: 776px){
-  .homePage {
-    h1 {
-      font-size: 5rem;
-    }
-    p {
-      font-size: 2.8rem;
+    .buttonContainer {
+      width: 100%;
     }
     a {
-      font-size: 3rem;
+      width: 50%;
+    }
+    button {
+      width: 100%;
     }
   }
+
 }
+
+// IPAD
+// @media (max-width: 776px){
+//   .homePage {
+//     h1 {
+//       font-size: 5rem;
+//     }
+//     p {
+//       font-size: 2.8rem;
+//     }
+//     a {
+//       font-size: 3rem;
+//     }
+//   }
+// }
 
 
 @media (max-width: 650px){
   .homePage {
+    .profilePic {
+      margin-top: 10vh;
+    }
     h1 {
       font-size: 4rem;
     }
@@ -139,37 +160,58 @@
   }
 }
 
-@media (max-width: 516px){
-  .homePage {
-    h1 {
-      font-size: 3.5rem;
-    }
-    p {
-      font-size: 1.8rem;
-    }
-    .buttonContainer {
-      width: 100%;
-      display: flex;
-    }
-    a {
-      width: 100%;
-      font-size: 2.8rem;
-    }
-    button {
-      font-size: 2rem;
-      width: 100%;
-    }
-  }
-}
+// @media (max-width: 516px){
+//   .homePage {
+//     h1 {
+//       font-size: 3.5rem;
+//     }
+//     p {
+//       font-size: 1.8rem;
+//     }
+//     .buttonContainer {
+//       width: 100%;
+//       display: flex;
+//     }
+//     a {
+//       width: 100%;
+//       font-size: 2.8rem;
+//     }
+//     button {
+//       font-size: 2rem;
+//       width: 100%;
+//     }
+//   }
+// }
 
 @media (max-width: 453px){
   .homePage {
-    height: calc(100vh - 5rem);
+    .profilePic {
+      height: 40vh;
+    }
+    .picOfYou {
+      height: 80%;
+      width: 90%;
+    }
     h1 {
       font-size: 4.5rem;
     }
     p, a {
       font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 354px){
+  .homePage {
+    .profilePic {
+      height: 25vh;
+    }
+    .picOfYou {
+      height: 80%;
+      width: 90%;
+    }
+    h1 {
+      font-size: 3.7rem;
     }
   }
 }

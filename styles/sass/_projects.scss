@@ -21,11 +21,32 @@
   .anotherSquaresDiv {
     flex-wrap: wrap;
     display: flex; 
-    padding: 1rem;
+    padding: 1rem 2rem 4rem 1rem;
     justify-content: space-evenly;
+    flex-direction: column;
+    h3, p {
+      text-align: center;
+    }
+    h3 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+    }
+    .technical {
+      font-size: 1.5rem; 
+    }
+    .description {
+      font-size: 1.7rem; 
+      text-align: justify;
+      margin: 1.5rem 0 0 1rem;
+      color: var(--accentColor);
+    }
+  }
+  .work, 
+  .projectInfo {
+    width: 350px;
   }
   .work {
-    width: 350px;
+    // width: 350px;
     height: 210px;
     background-color: whitesmoke;
     position: relative;
@@ -51,21 +72,33 @@
     background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19dc5761-74ce-493a-a3d9-f42c2d213066/dd9ygyq-56155754-6036-4ee2-a9f7-1b49bfaa0268.png/v1/fill/w_1192,h_670,q_70,strp/pikachu_minimalist_vector_by_erohir_dd9ygyq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MDg1IiwicGF0aCI6IlwvZlwvMTlkYzU3NjEtNzRjZS00OTNhLWEzZDktZjQyYzJkMjEzMDY2XC9kZDl5Z3lxLTU2MTU1NzU0LTYwMzYtNGVlMi1hOWY3LTFiNDliZmFhMDI2OC5wbmciLCJ3aWR0aCI6Ijw9OTA0MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.EiAse7hl9nbH2ay_lzsiJA7pEicVrJQtQOQ0lzaxo0M);
   }
   #plantProject {
-    background-image: url(https://i.pinimg.com/564x/00/77/c2/0077c2282b04ca5702e9c549b299641c.jpg);
+    background-image: url(https://i.pinimg.com/564x/b6/5e/0c/b65e0ce50750a67fd6960bcbca2de595.jpg);
+    background-position: center top;
   }
-  #travel {
-    background-image: url(http://gdj.graphicdesignjunction.com/wp-content/uploads/2013/03/minimal+wallpapers+75.jpg);
-  }
+  // #travel {
+  //   background-image: url(http://gdj.graphicdesignjunction.com/wp-content/uploads/2013/03/minimal+wallpapers+75.jpg);
+  // }
   // #germany {
   //   background-image: url(https://ih1.redbubble.net/image.1252255825.1633/st,small,507x507-pad,600x600,f8f8f8.jpg);
   // }
-  #personal {
-    background-image: url(https://cdn1.iconfinder.com/data/icons/family-avatar-solid-happy-party/1000/Asian_Female006-512.png);
-    background-position: center top;
-  }
+  // #personal {
+  //   background-image: url(https://cdn1.iconfinder.com/data/icons/family-avatar-solid-happy-party/1000/Asian_Female006-512.png);
+  //   background-position: center top;
+  // }
   // #italy {
   //   background-image: url(https://i.pinimg.com/564x/24/46/bd/2446bdd95d7888f1018b5880f7442ddd.jpg)
   // }
+  #planted {
+    background-image: url(https://i.pinimg.com/564x/00/77/c2/0077c2282b04ca5702e9c549b299641c.jpg);
+  }
+  #panda {
+    background-image: url(https://i.pinimg.com/564x/f5/fb/f8/f5fbf8a33aa656f33e1312db9ebf8bd9.jpg);
+    background-position: center bottom;
+  }
+  #photography {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/family-avatar-solid-happy-party/1000/Asian_Female006-512.png);
+    background-position: center top;
+  }
   #carrie {
     background-image: url(https://preview.redd.it/frkk5cv8or041.jpg?width=640&crop=smart&auto=webp&s=eb2658e605385999e701f945335021d251b4cf6a)
   }
@@ -79,8 +112,11 @@
 
 @media (max-width: 1200px){
   .projectsPage{
-    .work {
+    .work,
+    .projectInfo {
       width: 290px;
+    }
+    .work {
       height: 174px;
     }
   }
@@ -88,17 +124,23 @@
 
 @media (max-width: 992px){
   .projectsPage{
-    .work {
+    .work,
+    .projectInfo {
       width: 330px;
+    }
+    .work {
       height: 198px;
+    }
+    .anotherSquaresDiv .description {
+      text-align: center;
     }
   }
 }
 
 @media (max-width: 768px){
   .projectsPage{
-    .work {
-      height: 306px;
+    .work,
+    .projectInfo {
       width: 510px;
     }
   }
@@ -111,8 +153,8 @@
       display: flex;
       justify-content: center;
     }
-    .work {
-      height: 153px;
+    .work,
+    .projectInfo {
       width: 255px;
     }
   }
