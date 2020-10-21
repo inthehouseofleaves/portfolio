@@ -543,16 +543,6 @@ button:hover, button:focus {
   margin: 0.5rem 0.25rem;
 }
 
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
-}
-
 .homePage {
   height: 100vh;
   display: -webkit-box;
@@ -767,16 +757,6 @@ button:hover, button:focus {
   }
 }
 
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
-}
-
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -954,16 +934,6 @@ button:hover, button:focus {
   .about .calendly {
     font-size: 1.3rem;
   }
-}
-
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
 }
 
 .servicesPage .services {
@@ -1205,16 +1175,6 @@ button:hover, button:focus {
   }
 }
 
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
-}
-
 .projectsPage .works {
   margin: 5rem 0;
   display: -webkit-box;
@@ -1395,16 +1355,6 @@ button:hover, button:focus {
   }
 }
 
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
-}
-
 .cvPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1551,16 +1501,6 @@ button:hover, button:focus {
   }
 }
 
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
-}
-
 .contactPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1703,16 +1643,6 @@ button:hover, button:focus {
   .contactPage p {
     font-size: 1.8rem;
   }
-}
-
-:root {
-  --headerFont: "Poppins", sans-serif;
-  --bodyFont: "Mulish", sans-serif;
-  --mainColor: #353353;
-  --secondaryColor: #302F4E;
-  --textColor: #ffffff;
-  --accentColor: #DAA520;
-  --opacity: rgba(255,255,255, 0.2);
 }
 
 footer {
